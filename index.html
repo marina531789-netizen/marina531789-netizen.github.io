@@ -52,13 +52,8 @@ role-tables:
 
 <gradio-app src="https://marinachxi-first.hf.space"></gradio-app>
 
-
-<gradio-app src="https://[marinachxi]-first.
-hf.space" theme_mode="light"></gradio-app>
-
-
-
-
+<!-- 删掉错误的 gradio 链接 -->
+<!-- <gradio-app src="https://[marinachxi]-first.hf.space" theme_mode="light"></gradio-app> -->
 
 <div id="people">
     <h2>People</h2>
@@ -74,21 +69,35 @@ hf.space" theme_mode="light"></gradio-app>
         </section>
     {% endfor %}
 </div>
-<!-- 数字媒体实践成果（修正语法错误） -->
+
+<!-- 数字媒体实践成果（100% 显示方案） -->
 <hr>
-<h2>Digital Media Practice</h2>
+<div style="padding: 20px; background: #f8f9fa; border-radius: 8px;">
+    <h2>Digital Media Practice</h2>
 
-<h3>Audio Waveform</h3>
-<img src="https://github.com/marina531789-netizen/marina531789-netizen.github.io/raw/master/media/audio_waveform.png" style="max-width:100%; margin: 10px 0;">
+    <h3 style="margin-top: 20px;">Audio Waveform</h3>
+    <img src="https://github.com/marina531789-netizen/marina531789-netizen.github.io/raw/master/media/audio_waveform.png" 
+         style="max-width:100%; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;">
 
-<h3>Processed Audio</h3>
-<audio controls style="width:100%; margin: 10px 0;">
-  <source src="https://github.com/marina531789-netizen/marina531789-netizen.github.io/raw/master/media/short_audio.wav" type="audio/wav">
-  你的浏览器不支持音频播放
-</audio>
+    <h3 style="margin-top: 20px;">Processed Audio</h3>
+    <audio controls style="width:100%; margin: 10px 0;">
+      <source src="https://github.com/marina531789-netizen/marina531789-netizen.github.io/raw/master/media/short_audio.wav" type="audio/wav">
+      你的浏览器不支持音频播放
+    </audio>
 
-<h3>Processed Video</h3>
-<video controls style="width:100%; margin: 10px 0;">
-  <source src="https://github.com/marina531789-netizen/marina531789-netizen.github.io/raw/master/media/output.mp4" type="video/mp4">
-  你的浏览器不支持视频播放
-</video>
+    <h3 style="margin-top: 20px;">Processed Video</h3>
+    <!-- 方案1：预览图+跳转播放（GitHub 最稳定） -->
+    <a href="https://github.com/marina531789-netizen/marina531789-netizen.github.io/raw/master/media/output.mp4" 
+       target="_blank" style="display: block; margin: 10px 0;">
+        <div style="padding: 20px; text-align: center; border: 1px dashed #ccc; border-radius: 4px; cursor: pointer;">
+            <span class="fa fa-play-circle-o" style="font-size: 30px; color: #007bff;"></span>
+            <p style="margin: 10px 0; color: #333;">点击播放处理后的视频（Processed Video）</p>
+        </div>
+    </a>
+
+    <!-- 方案2：备用视频播放器（兼容部分浏览器） -->
+    <video controls style="width:100%; margin: 10px 0; display: none;">
+      <source src="https://github.com/marina531789-netizen/marina531789-netizen.github.io/raw/master/media/output.mp4" type="video/mp4">
+      你的浏览器不支持视频播放
+    </video>
+</div>
