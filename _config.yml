@@ -1,6 +1,5 @@
 name: 马晨曦课题组  Ma Research Group
-url: https://xiaohang007.github.io/
-
+url: https://marina531789-netizen.github.io/
 exclude: [bibble, README.md, Makefile, screenshot.png]
 
 # colorize code snippets with the pygments module
